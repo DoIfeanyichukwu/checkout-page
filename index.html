@@ -16,80 +16,146 @@
       href="https://devchallenges.io/"
     />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>Devchallenges</title>
 
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
+    <form class="checkoout" method="post">
+      <h1 class="form-main-text">Checkout</h1>
+      <section class="contact">
+        <div class="contact-info">
+          <h2>Contact information</h2>
+          <label class="label" for="email">E-mail</label>
+          <div class="input">
+            <span class="icon">
 
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
+            </span>
+            <input type="email" required name="email" id="email" placeholder="Enter your email..." aria-placeholder="Enter your email">
+          </div>
+
+          <label class="label" for="phone">phone (optional)</label>
+          <div class="input">
+            <span class="icon">
+
+            </span>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone..." aria-placeholder="Enter your phone number">
+          </div>
+        </div>
+
+        <div class="shipping-address">
+          <label for="fname" class="label">Full name</label>
+          <div class="input">
+            <span class="icon"></span>
+            <input type="text" required id="fname" name="fname" placeholder="Enter your full name..." aria-placeholder="Enter your full name">
+          </div>
+
+          <label for="address" class="label">Address</label>
+          <div class="input">
+            <span class="icon"></span>
+            <input type="text" id="address" name="address" required placeholder="Your address..." aria-placeholder="Your address">
+          </div>
+
+          <label for="city" class="label">City</label>
+          <div class="input">
+            <span class="icon"></span>
+            <input type="text" required id="city" name="city" placeholder="Your city..." aria-placeholder="Your city">
+          </div>
+
+          <div class="flex">
+            <div>
+              <label class="label" for="country">Country</label>
+              <div class="input">
+                <span class="icon"></span>
+                <select name="country" id="country" class="country-select">
+                  <option value="Nigeria">Nigeria</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="label" for="postal">Postal code (optional)</label>
+              <div class="input">
+                <span class="icon"></span>
+                <input type="text" inputmode="numeric" id="postal" name="postal" placeholder="Your postal code...">
+              </div>
+            </div>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" name="confirm" id="confirm">
+            <label for="confirm" class="label">Save this information for next time</label>
+          </div>
+
+          <button class="continue">
+            Continue
+          </button>
+        </div>
+      </section>
+      <section class="product">
+        <article class="prod-card">
+          <figure class="prod-img">
+            <img class="img" src="./assets/img/photo1.png" alt="vintage backbag">
+          </figure>
+          <div class="price-qty">
+            <h1 class="prod-name">vintage backbag</h1>
+            <p class="price">
+              <span class="current-price">$54.99</span>
+              <span class="prev-price">
+                <strike class="strike">$94.99</strike>
+              </span>
+              <div class="qty">
+                <input type="button" class="decrease" value="-" id="prod1-minus">
+                <label class="no-visible" for="prod1-minus">Subtract one product</label>
+                <input type="number" inputmode="numeric" value="1" min="0" id="qty" name="qty">
+                <label for="qty" class="prod-label no-visible">Enter product quantity</label>
+                <label class="no-visible" for="prod1-plus">Add one more product</label>
+                <input id="prod1-plus" type="button" class="increase" value="+">
+              </div>
+            </p>
+          </div>
+        </article>
+
+        <article class="prod-card">
+          <figure class="prod-img">
+            <img class="img" src="./assets/img/photo2.png" alt="Levi shoes">
+          </figure>
+          <div class="price-qty">
+            <h1 class="prod-name">levi shoes</h1>
+            <p class="price">
+              <span class="current-price">$74.99</span>
+              <span class="prev-price">
+                <strike class="strike">$124.99</strike>
+              </span>
+              <div class="qty">
+                <input type="button" class="decrease" value="-" id="prod2-minus">
+                <label class="no-visible" for="prod2-minus">Subtract one product</label>
+                <input type="number" inputmode="numeric" min="0" value="1" id="qty2" name="qty">
+                <label for="qty2" class="prod-label no-visible">Enter product quantity</label>
+                <label class="no-visible" for="prod2-plus">Add one more product</label>
+                <input type="button" id="prod2-plus" value="+" class="increase">
+
+              </div>
+            </p>
+          </div>
+        </article>
+
+        <p class="prices">
+          <span class="prices-name">shipping</span>
+          <span class="prices-amt">$19</span>
         </p>
-      </div>
 
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
+        <p class="prices">
+          <span class="prices-name">total</span>
+          <span class="prices-amt">$148.98</span>
+        </p>
+      </section>
+    </form>
+    <footer>
+      <p>
+        created by <a href="#">@DoIfeanyichukwu</a> - <a href="#">devchallenges.io</a>
+      </p>
+    </footer>
   </body>
 </html>

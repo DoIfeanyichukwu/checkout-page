@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+img {
+    width: 100%;
+    max-inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 0.99;
+}
+
+/* make unwanted labels invisible, but visible to screen readers */
+.no-visible {
+    border: 0;
+    /* clip: rect(1px 1px 1px 1px); IE6, IE7 */
+    clip-path: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; 
+} 
+
+.footer a {
+    color: inherit;
+}
+
+.prod-img, .img {
+    height: 136.27px;
+    width: 134.21px;
+    border-radius: 13px;
+}
