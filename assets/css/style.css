@@ -19,6 +19,10 @@ img {
     width: 20px;
     height: 20px;
 }
+.icon img {
+    width: 20px;
+    height: 20px;
+}
 
 /* make unwanted labels invisible, but visible to screen readers */
 .no-visible {
