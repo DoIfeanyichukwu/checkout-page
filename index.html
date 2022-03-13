@@ -23,7 +23,9 @@
   </head>
   <body>
     <h1 class="form-main-text">Checkout</h1>
-    <form class="checkout" method="get">
+
+
+    <form class="checkout" method="post">
       <section class="contact">
         <div class="contact-info">
           <h2 class="contact-text">Contact information</h2>
@@ -362,52 +364,82 @@
           </button>
         </div>
       </section>
+
+
       <section class="product">
         <article class="prod-card">
+
           <figure class="prod-img">
             <img class="img" src="./assets/img/photo1.png" alt="vintage backbag">
           </figure>
+
+
           <div class="price-qty">
+
             <h1 class="prod-name">vintage backbag</h1>
+
+
             <p class="price">
+
               <span class="current-price">$54.99</span>
               <span class="prev-price">
                 <strike class="strike">$94.99</strike>
               </span>
+
+
               <div class="qty">
-                <button type="button" class="decrease qty-btn" id="prod1-minus">-</button>
+
+                <input value="-" type="button" class="decrease qty-btn" id="prod1-minus">
                 <label class="no-visible" for="prod1-minus">Subtract one product</label>
-                <input class="qty-input" type="number" inputmode="numeric" aria-disabled="false"  value="1" min="0" id="qty" name="backbag">
+
+                <input class="qty-input prod1" type="number" inputmode="numeric" aria-disabled="false"  value="1" min="0" id="qty" name="backbag">
                 <label for="qty" class="prod-label no-visible">Enter product quantity</label>
+
                 <label class="no-visible" for="prod1-plus">Add one more product</label>
-                <button id="prod1-plus" type="button" class="increase qty-btn">+</button>
+                <input id="prod1-plus" type="button" class="increase qty-btn" value="+">
+
               </div>
             </p>
           </div>
+
         </article>
+
 
         <article class="prod-card">
           <figure class="prod-img">
             <img class="img" src="./assets/img/photo2.png" alt="Levi shoes">
           </figure>
+
+
           <div class="price-qty">
+
             <h1 class="prod-name">levi shoes</h1>
+
+
             <p class="price">
+
               <span class="current-price">$74.99</span>
               <span class="prev-price">
                 <strike class="strike">$124.99</strike>
               </span>
+
+
               <div class="qty">
                 <input type="button" class="decrease qty-btn" value="-" id="prod2-minus">
                 <label class="no-visible" for="prod2-minus">Subtract one product</label>
-                <input class="qty-input" aria-disabled="false" type="number" inputmode="numeric" min="0" value="1" id="qty2" name="shoes">
+
+                <input class="qty-input prod2" aria-disabled="false" type="number" inputmode="numeric" min="0" value="1" id="qty2" name="shoes">
                 <label for="qty2" class="prod-label no-visible">Enter product quantity</label>
+
                 <label class="no-visible" for="prod2-plus">Add one more product</label>
                 <input type="button" id="prod2-plus" value="+" class="increase qty-btn">
-
               </div>
+
             </p>
+
           </div>
+
+
         </article>
 
         <p class="prices">
@@ -421,26 +453,15 @@
         </p>
       </section>
     </form>
+
+
     <footer class="footer">
       <p>
-        created by <a href="#">@DoIfeanyichukwu</a> - <a href="#">devchallenges.io</a>
+        created by <a href="https://devchallenges.io/portfolio/DoIfeanyichukwu">@DoIfeanyichukwu</a> - <a href="https://devchallenges.io/">devchallenges.io</a>
       </p>
     </footer>
 
-    <script>
-      document.addEventListener('blur', function (event) {
-      // Validate the field
-      const isValid = event.target.validity.valid;
-      const message = event.target.validationMessage;
-      const connectedValidationId = event.target.getAttribute('aria-describedby');
-      const connectedValidation = connectedValidationId ? document.getElementById(connectedValidationId) : false;
-  
-      if (connectedValidation && message && !isValid) {
-        connectedValidation.innerText = message;
-      } else {
-        connectedValidation.innerText = '';
-      }
-      }, true);
-  </script>
+    <script src="./assets/js/index.js">
+    </script>
   </body>
 </html>
