@@ -16,6 +16,25 @@ html {
     font-weight: 600;
 }
 
+.validation-message {
+    display: block;
+    padding-top: 0;
+    color: red;
+    position: relative;
+    top: -10px;
+    font-size: .7rem;
+}
+
+button {
+    cursor: pointer;
+}
+.continue:hover {
+    background-color: #fa7908;
+}
+input[type=button] {
+    cursor: pointer;
+}
+
 img {
     width: 100%;
     max-inline-size: 100%;
@@ -75,7 +94,6 @@ input[type="checkbox"] {
     flex-direction: column;
 }
 .form-main-text {
-    order: 1;
     font-size: 24px;
     line-height: 1.8;
     color: #4e5150;
@@ -84,10 +102,10 @@ input[type="checkbox"] {
     margin-top: 2rem;
 }
 .contact {
-    order: 3;
+    order: 2;
 }
 .product {
-    order: 2;
+    order: 1;
     background-color: #f2f2f2;
     border-radius: 0.75rem;
     padding: 1.9rem 1.5625rem;
@@ -95,11 +113,7 @@ input[type="checkbox"] {
     /* width: 350px; */
     /* removed fixed size of 350px to enable flow */
 }
-/* @media (max-width: 320px) {
-    .product {
-        width: initial;
-    }
-} */
+
 .prod-card {
     display: flex;
     justify-content: space-between;
@@ -163,7 +177,16 @@ input[type="checkbox"] {
     text-align: center;
     border: none;
     background-color: transparent;
-    padding-left: .8rem;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+}
+.qty-input:focus {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
 }
 
 /* prices */
@@ -229,8 +252,24 @@ input[type="checkbox"] {
     height: 2.535rem;
     border: 1px solid #828282;
     border-radius: .725rem;
-    padding: 0 0 0 2rem;
+    padding: 0 .5rem 0 2rem;
     background-color: transparent;
+    appearance: none;
+}
+.input.select{
+    position: relative;
+}
+.input.select::after {
+    content: ' ';
+    background-color: #e0e0e0;
+    background-image: url(../img/keyboard_arrow_down_black_24dp.svg);
+    width: .9375rem;
+    height: .9375rem;
+    position: absolute;
+    right: 6%;
+    top: 35%;
+    background-size: contain;
+    border-radius: 4px;
 }
 .postal-flex {
     width: 65%;
@@ -265,11 +304,96 @@ input[type="checkbox"] {
     width: 10.375rem;
 }
 
-/* footer */
 
+
+/* footer */
 .footer {
     text-align: center;
     color: #bdbdbd;
     font-size: .875rem;
     line-height: 1.067;
+}
+
+
+
+
+
+
+/* for desktop */
+
+@media (min-width: 1440px)
+{
+    html {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    body {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .checkout {
+        flex-direction: row;
+        width: 100%;
+    }
+    .contact {
+        order: 1;
+        width: 50%;
+        margin-inline-end: 7rem;
+    }
+    .product {
+        order: 2;
+        width: 40%;
+        height: 535px;
+    }
+
+    .form-main-text {
+        font-size: 2.25rem;
+    }
+    .contact-text {
+        font-size: 1.125rem;
+    }
+    .label{
+        font-size: 0.75rem;
+        margin-bottom: 0.436rem;
+        line-height: 0.914375;
+    }
+    .contact-input {
+        height: 3.5rem;
+    }
+    .country-select {
+        height: 3.5rem;
+    }
+    .icon img {
+        height: 16px;
+    }
+    .icon {
+        top: 35%;
+    }
+    .check > .check {
+        width: 1.3125rem;
+        height: 1.3125rem;
+    }
+    .label.label-check {
+        font-size: 0.75rem;
+        line-height: .914375;
+    }
+    .prod-name, .current-price {
+        font-size: 1rem;
+        line-height: 1.21875;
+    }
+    .prev-price {
+        font-size: .75rem;
+        line-height: .914375;
+    }
+    .qty {
+        width: 8.39rem;
+        margin-top: 1.1875rem;
+    }
+    .prod-img {
+        width: 8.388rem;
+        height: 8.52rem;
+    }
+
 }
