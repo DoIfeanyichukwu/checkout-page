@@ -18,17 +18,19 @@ const handleIncrementDecrement = (event) => {
     event.preventDefault();
 
     const target = event.target;
-    if (!(target.tagName=="INPUT" && target.type == "button")) return;
-
-    let prod = target.id.split('-')[0];
-    prod = document.getElementsByClassName(prod)[0];
-
-    if (target.value == '+') {
-        prod.value = Number(prod.value) + 1;
-    }else {
-        if (prod.value <= 0) return;
-        prod.value -= 1;
+    if (target.tagName=="INPUT" && target.type == "button")
+    {
+        let prod = target.id.split('-')[0];
+        prod = document.getElementsByClassName(prod)[0];
+    
+        if (target.value == '+') {
+            prod.value = Number(prod.value) + 1;
+        }else {
+            if (prod.value <= 0) return;
+            prod.value -= 1;
+        }
     }
-}
 
-document.addEventListener('click', handleIncrementDecrement);
+}
+const product = document.querySelector('.product')
+product.addEventListener('click', handleIncrementDecrement);
