@@ -92,7 +92,7 @@ The targetted screen sizes are 375px and 1440px
 ## Contact
 
 - GitHub [@DoIfeanyichukwu](https://{github.com/your-usermame})
-- Twitter [@DoIfeanyichukwu](https://twitter.com/DoIfeanyichukwu)
+- Twitter [@DoIfeanyichukwu](https://twitter.com/HIIfeanyichukwu)
 
 
 ***
